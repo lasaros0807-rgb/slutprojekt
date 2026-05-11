@@ -1,0 +1,30 @@
+body {
+  background-image: url("https://thumbs.dreamstime.com/b/svart-tavla-som-inskrivas-med-vetenskapliga-formler-och-ber%C3%A4kningar-i-fysik-matematik-kan-illustrera-vetenskapligt-113379487.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  min-height: 100vh;
+}
+
+.navi {
+  background-color: rgb(255, 255, 255);
+  padding: 16px 32px;
+  display: flex;
+  gap: 24px;
+  border-radius: 12px;
+  margin: 12px;
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+}
+
+.navi a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navi a:hover {
+  color: lightgray;
+}
+
