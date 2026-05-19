@@ -1,3 +1,7 @@
+//detta styckehindrar folk från att utföra
+//xss attacker genom att  ta bort tecken som <>
+//samt att den gör text till små bokstäver och tar bort mellanslag
+
 function sanitize(text) {
     return text
         .toLowerCase()
@@ -5,6 +9,10 @@ function sanitize(text) {
         .replace(/>/g, "")
         .trim(); 
 }
+
+
+//detta är en lista av frågor och svar
+//varje fråga har själva frågan och svarsalternativ och det korrekta svaret  
 
 const questions = [
     {
@@ -48,18 +56,32 @@ const questions = [
     }
 ];
 
+//dessa hämtar html element från html filen så att man kan ändra på dem i javascripten
+
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
+//dessa är variabler som håller koll på vilken fråga man är på och hur mnycket poäng man har.
+
 let currentQuestionIndex = 0;
 let score = 0;
+
+//detta stycke startar quizet genom att återställa själva frågan man är på så att man hamnar på första 
+//frågan och att poängen återställs, den ändrar även namnet på knappen i htmnl till  next och sedan
+//visar första frågan. 
+
+
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
 }
+
+//denna visar den frågan man är på samt svaren men sedan rensas gamlasvar 
+//och den hämtar den nya frågan och svar från listan reptetererwar
+
 function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -77,6 +99,8 @@ function showQuestion() {
     })   
 }
 
+//återställer sidan för nästa fråga samt gömmer nästa knappen och tar bort gamla svarknappar
+
 function resetState() {
     nextButton.style.display = "none";
     while(answerButtons.firstChild) {
@@ -84,6 +108,9 @@ function resetState() {
     }
 }
 
+
+//denna funktion körs när man trycker på ett svar den kontrollerar om det var rätt eller fel
+//och ändrar på färg och uppdaterar poängen samt visar vilket svar var fel
 
 function selectAnswer(e) {
     const selectedBtn = e.target;
@@ -104,6 +131,8 @@ function selectAnswer(e) {
     nextButton.style.display = "block";
 }
 
+//denna gör så att när quizet är klart så kan man se sina poäng och den gör 
+// så att du kan starta om quizet
 
 function showScore() {
     resetState();
@@ -111,6 +140,9 @@ function showScore() {
     nextButton.innerHTML = "play again";
     nextButton.style.display = "block";
 }
+
+//denna tar hand om vad som händer när man går visare den ökar frågeindexet
+//om frågor finns kvar visar den nästa fråga annars visar den poängen
 
 function handleNextButton() {
     currentQuestionIndex++;
@@ -120,6 +152,11 @@ function handleNextButton() {
         showScore();
     }}
 
+
+    //detta äör en händelselyssnare för knappen nästa
+    //om det finns fler frågor visas nästa fråga annars startas quizet om
+
+
 nextButton.addEventListener("click", () => {
     if(currentQuestionIndex < questions.length) {
         handleNextButton();
@@ -127,4 +164,7 @@ nextButton.addEventListener("click", () => {
         startQuiz();
     }
 })
+
+//startar quizet när sidan laddas
+
 startQuiz();
