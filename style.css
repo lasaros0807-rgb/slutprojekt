@@ -88,3 +88,14 @@ display: none;
 .incorrect {
   background-color: #ff9393;
 }
+
+@media(max-width:600px){
+  nav{
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    width: 90%;
+  }
+}

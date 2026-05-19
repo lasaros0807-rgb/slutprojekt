@@ -1,3 +1,11 @@
+function sanitize(text) {
+    return text
+        .toLowerCase()
+        .replace(/</g, "")
+        .replace(/>/g, "")
+        .trim(); 
+}
+
 const questions = [
     {
         questions: "which is largest animal in the world",
