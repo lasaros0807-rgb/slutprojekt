@@ -1,3 +1,7 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
   background-image: url("https://thumbs.dreamstime.com/b/svart-tavla-som-inskrivas-med-vetenskapliga-formler-och-ber%C3%A4kningar-i-fysik-matematik-kan-illustrera-vetenskapligt-113379487.jpg");
   background-size: cover;
@@ -97,5 +101,91 @@ display: none;
 
   section {
     width: 90%;
+  }
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 120px;
+  row-gap: 120px;
+  grid-auto-rows: minmax(220px, auto);
+  width: 95%;
+  max-width: 1400px;
+  margin: 160px auto 40px;
+  align-items: stretch;
+  padding: 0 20px;
+}
+
+.box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  min-height: 260px;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 800px) {
+  .boxes {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 40px auto;
+    padding: 0 12px;
+  }
+  .box {
+    min-height: 180px;
+    padding: 20px;
+  }
+}
+.recensioner-ld {
+  background-color: #fff;
+  width: 95%;
+  max-width: 1400px;
+  margin: 120px auto 40px;
+  padding: 30px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.recensioner-ld h2 {
+  font-size: 24px;
+  color: #001e4d;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.recensioner-box {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #001e4d;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+  .recensioner-ld {
+    width: 95%;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .recensioner-ld h2 {
+    font-size: 20px;
   }
 }
