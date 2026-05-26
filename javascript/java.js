@@ -16,42 +16,42 @@ function sanitize(text) {
 
 const questions = [
     {
-        questions: "which is largest animal in the world",
+        questions: "Vad är derivatan till x^2?",
         answers:[
-            {text: "shark", correct: false},
-            {text: "blue whale ", correct: true},
-            {text: "elefantr ", correct: false},
-            {text: "giraffe", correct: false}
+            {text: "2x", correct: true},
+            {text: "x^2", correct: false},
+            {text: "x", correct: false},
+            {text: "2", correct: false}
         ]
     }, 
 
     {
-       questions: "which is largest anim in the world",
+       questions: "Vad är den primitiva funktionen till 3x^2?",
         answers:[
-            {text: "shark", correct: false},
-            {text: "blue whale ", correct: true},
-            {text: "elefantr ", correct: false},
-            {text: "giraffe", correct: false}
+            {text: "x^3", correct: false},
+            {text: "x^3/3", correct: false},
+            {text: "x^3/2", correct: false},
+            {text: "x^3/3 + C", correct: true}
         ] 
     }, 
 
     {
-       questions: "which is lart animal in the world",
+       questions: "Vad är derivatan till 10x^3?",
         answers:[
-            {text: "shark", correct: false},
-            {text: "blue whale ", correct: true},
-            {text: "elefantr ", correct: false},
-            {text: "giraffe", correct: false}
+            {text: "30x^2", correct: true},
+            {text: "10x^2", correct: false},
+            {text: "10x^3", correct: false},
+            {text: "30x^3", correct: false}
         ] 
     }, 
 
     {
-       questions: "which is largest animal  the world",
+       questions: "Vad är den primitiva funktionen till 5x^4?",
         answers:[
-            {text: "shark", correct: false},
-            {text: "blue whale ", correct: true},
-            {text: "elefantr ", correct: false},
-            {text: "giraffe", correct: false}
+            {text: "x^5", correct: false},
+            {text: "x^5/5", correct: false},
+            {text: "x^5/4", correct: false},
+            {text: "x^5/5 + C", correct: true}
         ] 
     }
 ];
@@ -168,3 +168,4 @@ nextButton.addEventListener("click", () => {
 //startar quizet när sidan laddas
 
 startQuiz();
+
