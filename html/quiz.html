@@ -10,43 +10,47 @@
   </head>
 
   <body>
-    <!-- allt som man ser i sidan visas här
+    <div class="page-wrapper">
+      <!-- allt som man ser i sidan visas här
          det som visas är en navigationbar sedan quizet -->
-     <nav class = "navi">
-      <!-- Sidans huvudmeny används för att
+      <nav class="navi">
+        <!-- Sidans huvudmeny används för att
            navigera mellan olika sidor på webbplatsen. -->
-      <a href="matte3c.html">Hem</a>
-      <a href="deri.html">Derivator</a>
-      <a href="prim.html">Integraler</a>
-      <a href="quiz.html">Quiz</a>
-    </nav>
-    
+        <a href="matte3c.html">Hem</a>
+        <a href="deri.html">Derivator</a>
+        <a href="prim.html">Integraler</a>
+        <a href="quiz.html">Quiz</a>
+      </nav>
 
-        
-        <div class="boxes">
-<!--här visas frågan och svarsknapparna som genereras av JavaScript. -->
-<div class="app">
-<h1>Simple Quiz</h1>
-<div class="quiz">
-  <h2 id ="question"> question goes here</h2>
-  <div id="answer-buttons"></div>
-</div>
-<button id="next-btn">next</button>
+      <div class="boxes">
+        <!--här visas frågan och svarsknapparna som genereras av JavaScript. -->
+        <div class="app">
+          <h1>Simple Quiz</h1>
+          <div class="quiz">
+            <h2 id="question">question goes here</h2>
+            <div id="answer-buttons"></div>
+          </div>
+          <button id="next-btn">next</button>
+        </div>
 
-</div>
+        <div class="recensioner-ld">
+          <h2>Recensioner</h2>
 
-      <div class="recensioner-ld">
-        <!-- formulär för användare att lämna feedback. -->
-        <h2>Recensioner</h2>
-        <textarea class="recensioner-box" rows="8" placeholder="Skriv din recension här..."></textarea>
-        <button class="submit-btn">Skicka Recension</button>
+          <textarea class="recensioner-box" rows="8"></textarea>
+
+          <button class="submit-btn">Skicka Recension</button>
+
+          <div class="visade-recensioner">
+            <h3>Skrivna recensioner</h3>
+            <div id="reviewl"></div>
+          </div>
+        </div>
+
+        <!-- ladda JavaScript som skapar frågor och hanterar svar -->
+        <script src="../javascript/java.js"></script>
       </div>
+    </div>
 
-<!-- ladda JavaScript som skapar frågor och hanterar svar -->
-<script src="../javascript/java.js"></script>
-
-
-
-
+    <footer class="fot">@Gjord av Alex</footer>
   </body>
 </html>
